@@ -1,0 +1,1228 @@
+<!-- 
+    
+    Criador: Thiago, Juliana, Gustavo, Eric, Junior
+    Data inicial: 22/09/2024
+    Data final: indefindo  
+    
+-->
+
+<!DOCTYPE html>
+<html lang="pt_br">
+
+<!-- -----------------------------------------------META-DADOS//LINKS-------------------------------------------------------------- -->
+
+<!-- <header class="navbar">
+    <div class="logo">
+        <img src="../Imagens/Menu lateral Botões/Logo Planeja facil branco.png" alt="Logo">
+    </div>
+    <div class="user-info">
+        <span id="user-name"></span>
+        <button id="logout-btn">Sair</button>
+    </div>
+</header> -->
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planeja fácil</title>
+    <link rel="stylesheet" type="text/css" href=""> 
+
+    <link rel="icon" href="./Imagens/Menu lateral Botões/Logo Planeja facil branco.png" type="image/x-icon">
+
+    <link rel="stylesheet" type="text/css" href="./Css/Global/reset.css"> 
+    <link rel="stylesheet" type="text/css" href="./Css/Global/variables.css">
+    <link rel="stylesheet" type="text/css" href="./Css/Global/paginaInteira.css">
+
+    <link rel="stylesheet" type="text/css" href="./Css/Conteudo/menuFerramentas.css">
+    <link rel="stylesheet" type="text/css" href="./Css/Conteudo/menuProcura.css">
+
+    <link rel="stylesheet" type="text/css" href="./Css/telaPrincipal/telaPrincipal.css">
+    <link rel="stylesheet" type="text/css" href="./Css/telaPrincipal/cabecalho.css">
+    <link rel="stylesheet" type="text/css" href="./Css/telaPrincipal/menuHambuguer.css">
+    <link rel="stylesheet" type="text/css" href="./Css/telaPrincipal/Filtros.css">
+    <link rel="stylesheet" type="text/css" href="./Css/telaPrincipal/tarefas.css">
+
+    <link rel="stylesheet" type="text/css" href="./Css/configuracoes/configuracoes.css">
+
+</head>
+
+<!-- ----------------------------------------------CONTEUDO----------------------------------------------------------------- -->
+
+<body class="PaginaInteira">
+
+    <nav class="menuLateral">
+
+        <ul class="menuLateral__icones" id = "listaDeIcones">
+
+            <li>
+
+                <div class="logo-container">
+
+                    <a class="menuLateral__icones__logo" href="./index.html">
+
+                        <img class="menuLateral__icones__logo__img" src="./Imagens/Menu lateral Botões/Logo Planeja facil branco.png" alt="Logo do Planeja Fácil">
+
+                    </a>
+
+                </div>
+
+            </li>
+
+            <li>
+
+                <button class="menuLateral__icones__Botao">
+
+                    <img class="menuLateral__icones__Botao__img" src="./Imagens/Menu lateral Botões/icone home branco.png" alt="Icone tela inicial">
+
+                </button>
+ 
+             </li>
+
+            <li>
+
+                <button class="menuLateral__icones__Botao">
+ 
+                    <img class="menuLateral__icones__Botao__img"  src="./Imagens/Menu lateral Botões/icone conversas branco.png" alt="Icone conversas">
+ 
+                </button>
+  
+            </li>
+
+            <li>
+
+                <button class="menuLateral__icones__Botao iconeAtivo">
+ 
+                    <img class="menuLateral__icones__Botao__img"  src="./Imagens/Menu lateral Botões/icone pasta verde.png" alt="Icone tarefas">
+ 
+                </button>
+  
+            </li>
+
+            <li>
+
+                <button class="menuLateral__icones__Botao">
+ 
+                    <img class="menuLateral__icones__Botao__img" src="./Imagens/Menu lateral Botões/icone finalizado branco.png" alt="Icone tarefas finalizadas">
+ 
+                </button>
+  
+            </li>
+
+            <li>
+
+                <button class="menuLateral__icones__Botao">
+ 
+                    <img class="menuLateral__icones__Botao__img" src="./Imagens/Menu lateral Botões/icone notificação branco.png" alt="Icone notificação">
+ 
+                </button>
+  
+            </li>
+
+            <li>
+
+                <button class="menuLateral__icones__Botao">
+ 
+                    <img class="menuLateral__icones__Botao__img" src="./Imagens/Menu lateral Botões/icone pessoas branco.png" alt="Icone colegas">
+ 
+                </button>
+  
+            </li>
+
+            <li>
+
+                <button class="menuLateral__icones__Botao">
+ 
+                    <img class="menuLateral__icones__Botao__img" src="./Imagens/Menu lateral Botões/icone ferramenta branco.png" alt="Icone menu de ferramentas">
+ 
+                </button>
+  
+            </li>
+    
+        </ul>
+
+    </nav>
+
+    <section class="menuProcura">
+
+        <div class="menuProcura__caixaDePesquisa">
+
+            <img class="menuProcura__caixaDePesquisa__imagem" src="./Imagens/menuProcura/icone Lupa branca.png" alt="Icone lupa">
+
+            <input type="search" class="caixa__de__pesquisa__caixa" placeholder="Buscar...">
+
+        </div>
+
+        <ul class="menuProcura__lista">
+
+            <li class="menuProcura__lista__favoritos" id = "listaFavoritos">
+
+                <button class="menuProcura__lista__favoritos__botao__expandir temporario" id = "botaoExpandir__Favorito">
+
+                    <img class="menuProcura__lista__favoritos__botao__expandir__img" id = "iconeSetaFavorito" src="./Imagens/menuProcura/icone seta branca.png" alt="Icone seta">
+
+                    FAVORITOS
+
+                </button>
+
+                <div class="menuProcura__lista__favoritos__botao__expandir__projeto">
+
+                    <a class="menuProcura__lista__favoritos__botao__expandir__projeto__link"> 
+
+                        <img class="menuProcura__lista__favoritos__botao__expandir__projeto__link__iconeFavorito" src="./Imagens/menuProcura/icone estrela.png" alt="Icone favoritoEstrela">
+
+                        Minha casa minha vida
+    
+                    </a>
+
+                </div>
+
+                <div class="menuProcura__lista__favoritos__botao__expandir__projeto">
+
+                    <a class="menuProcura__lista__favoritos__botao__expandir__projeto__link">
+
+                        <img class="menuProcura__lista__favoritos__botao__expandir__projeto__link__iconeFavorito" src="./Imagens/menuProcura/icone circulo.png" alt="Icone favoritoCirculo">
+
+                        Arrumar namorada
+    
+                    </a>
+
+                </div>
+
+                <div class="menuProcura__lista__favoritos__botao__expandir__projeto">
+
+                    <a class="menuProcura__lista__favoritos__botao__expandir__projeto__link">
+
+                        <img class="menuProcura__lista__favoritos__botao__expandir__projeto__link__iconeFavorito" src="./Imagens/menuProcura/icone quadrado.png" alt="Icone favoritoQuandrado">
+
+                        Sonegar imposto 
+    
+                    </a>
+
+                </div>
+
+                <div class="menuProcura__lista__favoritos__botao__expandir__projeto">
+
+                    <a class="menuProcura__lista__favoritos__botao__expandir__projeto__link">
+
+                        <img class="menuProcura__lista__favoritos__botao__expandir__projeto__link__iconeFavorito" src="./Imagens/menuProcura/icone triangulo.png" alt="Icone favoritoTrinagulo">
+
+                        Reator nuclear 
+    
+                    </a>
+
+                </div>
+
+            </li>
+
+            <li class="menuProcura__lista__projetos" id = "listaProjetos"> 
+                <div class="menuProcura__lista__projetos__botoes">
+                    <button class="menuProcura__lista__projetos__botao__expandir linkAtivo temporario" id = "botaoExpandir__Projetos">
+
+                        <img class="menuProcura__lista__projetos__botao__expandir__img" id = "iconeSeta__projetos" src="./Imagens/menuProcura/seta verde.png" alt="Icone seta">
+
+                        PROJETOS
+
+                    </button>
+                    <button id="adicionarProjeto" class="menuProcura__lista__projetos__botao__adicionar">
+                        <img height="20" src="./Imagens/menuProcura/add-projeto.png" alt="Adicionar projeto">
+                    </button>
+                </div>
+                <section class="menuProcura__lista__projetos__continer" id="listaTodosProjetos">
+
+                    <button class="menuProcura__lista__projetos__botao__expandir__dois temporario" id = "botaoExpandir__TodosProjetos" onclick="limparProjetos()">
+
+                        <img class="menuProcura__lista__projetos__botao__expandir__img"  id = "iconeSeta__TodosProjetos" src="./Imagens/menuProcura/icone seta branca.png" alt="Icone seta">
+                        <img class="menuProcura__lista__projetos__botao__expandir__img"  id = "iconeSeta__TodosProjetos2" src="./Imagens/menuProcura/icone seta branca.png" alt="Icone seta">
+
+                        Todos os projetos 
+    
+                    </button>
+
+                    <div class="menuProcura__lista__projetos__continerDoProjeto">
+
+                        <div class="menuProcura__lista__projetos__linha__decorativa">
+
+                            <img class="menuProcura__lista__projetos__linha__decorativa__img" src="./Imagens/menuProcura/Linha decorativa.png" alt="Icone seta">
+
+                        </div>
+
+                        <a class="menuProcura__lista__projetos__projeto__link"></a>
+
+                    </div>
+
+                </section>
+
+                <section class="menuProcura__lista__projetos__continer projetos__continer__margem " id = "listaProjetosFinalizados">
+
+                    <button class="menuProcura__lista__projetos__botao__expandir__dois temporario" id = "botaoExpandir__ProjetosFinalizado">
+
+                        <img class="menuProcura__lista__projetos__botao__expandir__img" id = "iconeSeta__ProjetosFinalizado" src="./Imagens/menuProcura/icone seta branca.png" alt="Icone seta">
+                        <img class="menuProcura__lista__projetos__botao__expandir__img" id = "iconeSeta__ProjetosFinalizado2" src="./Imagens/menuProcura/icone seta branca.png" alt="Icone seta">
+
+                        Projetos finalizados
+    
+                    </button>
+
+                    <div class="menuProcura__lista__projetos__continerDoProjeto">
+
+                        <div class="menuProcura__lista__projetos__linha__decorativa">
+
+                            <img class="menuProcura__lista__projetos__linha__decorativa__img" src="./Imagens/menuProcura/Linha decorativa.png" alt="Icone seta">
+
+                        </div>
+
+                        <a class="menuProcura__lista__projetos__projeto__link">
+
+                            minha casa minha vida
+         
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <section class="menuProcura__lista__projetos__continer projetos__continer__margem" id = "listaProjetosIncompletos">
+
+                    <button class="menuProcura__lista__projetos__botao__expandir__dois LinkAtivo temporario" id = "botaoExpandir__ProjetosIncompletos">
+
+                        <img class="menuProcura__lista__projetos__botao__expandir__img" id = "iconeSeta__ProjetosIncompletos" src="./Imagens/menuProcura/seta verde.png" alt="Icone seta">
+                        <img class="menuProcura__lista__projetos__botao__expandir__img " id = "iconeSeta__ProjetosIncompletos2" src="./Imagens/menuProcura/seta verde.png" alt="Icone seta">
+
+                        Projetos incompletos
+    
+                    </button>
+
+                    <div class="menuProcura__lista__projetos__continerDoProjeto">
+
+                        <div class="menuProcura__lista__projetos__linha__decorativa">
+
+                            <img class="menuProcura__lista__projetos__linha__decorativa__img" src="./Imagens/menuProcura/Linha decorativa.png" alt="Icone seta">
+
+                        </div>
+
+                        <a class="menuProcura__lista__projetos__projeto__link">
+
+                            Arrumar namorada
+         
+                        </a>
+
+                    </div>
+
+                    <div class="menuProcura__lista__projetos__continerDoProjeto">
+
+                        <div class="menuProcura__lista__projetos__linha__decorativa">
+
+                            <img class="menuProcura__lista__projetos__linha__decorativa__img" src="./Imagens/menuProcura/Linha decorativa.png" alt="Icone seta">
+
+                        </div>
+
+                        <a class="menuProcura__lista__projetos__projeto__link linkAtivo">
+
+                            Sonegar imposto 
+         
+                        </a>
+
+                    </div>
+
+                    <div class="menuProcura__lista__projetos__continerDoProjeto">
+
+                        <div class="menuProcura__lista__projetos__linha__decorativa">
+
+                            <img class="menuProcura__lista__projetos__linha__decorativa__img" src="./Imagens/menuProcura/Linha decorativa.png" alt="Icone seta">
+
+                        </div>
+
+                        <a class="menuProcura__lista__projetos__projeto__link">
+
+                            Reator nuclear
+         
+                        </a>
+
+                    </div>
+
+                </section>
+
+                <section class="menuProcura__lista__projetos__continer projetos__continer__margem" id = "listaProjetosCompartilhados">
+
+                    <button class="menuProcura__lista__projetos__botao__expandir__dois temporario" id="botaoExpandir__ProjetosCompartilhados">
+
+                        <img class="menuProcura__lista__projetos__botao__expandir__img" id = "iconeSeta__ProjetosCompartilhados" src="./Imagens/menuProcura/icone seta branca.png" alt="Icone seta">
+                        <img class="menuProcura__lista__projetos__botao__expandir__img" id = "iconeSeta__ProjetosCompartilhados2" src="./Imagens/menuProcura/icone seta branca.png" alt="Icone seta">
+
+                        Projetos compartilhados
+    
+                    </button>
+
+                    <div class="menuProcura__lista__projetos__continerDoProjeto">
+
+                        <div class="menuProcura__lista__projetos__linha__decorativa">
+
+                            <img class="menuProcura__lista__projetos__linha__decorativa__img" src="./Imagens/menuProcura/Linha decorativa.png" alt="Icone seta">
+
+                        </div>
+
+                        <a class="menuProcura__lista__projetos__projeto__link">
+
+                            Sonegar imposto 
+         
+                        </a>
+
+                    </div>
+
+                </section>
+
+            </li>
+
+        </ul>
+
+    </section>
+
+    <section class="telaPrincipal">
+
+        <section class="telaPrincipal__cabecalho">
+
+            <div class="telaPrincipal__cabecalho__continer__informacao">
+
+                <div class="telaPrincipal__cabecalho__continer__informacao__apresentacao">
+
+                    <h2 class="telaPrincipal__cabecalho__continer__informacao__apresentacao__titulo"> 
+                        
+                        Dashboard
+                
+                    </h2>
+
+                   <!--  <div class="telaPrincipal__cabecalho__continer__informacao__apresentacao__local">
+
+                        <img class="telaPrincipal__cabecalho__continer__informacao__apresentacao__local__img" src="./Imagens/menuProcura/Linha decorativa.png" alt="Icone seta">
+
+                        <h2> 
+                        
+                            PROJETOS / Projetos incompletos
+                    
+                        </h2>
+
+                    </div> -->
+
+                </div>
+
+                <div class="telaPrincipal__cabecalho__continer__informacao__apresentacao__icones" id = "iconesCabecalho">
+
+                    <img class="telaPrincipal__cabecalho__continer__informacao__apresentacao__icones__img apresentacao__icones__img__corrigir" src="./Imagens/Tela principal/icone busca.png" alt="Icone sbusca">
+
+                    <img class="telaPrincipal__cabecalho__continer__informacao__apresentacao__icones__img" src="./Imagens/Tela principal/icone estrela.png" alt="Icone estrela">
+
+                    <button class="telaPrincipal__cabecalho__continer__informacao__apresentacao__icones__continer" id = "menuOpcoesDaPagina">
+
+                        <img class="telaPrincipal__cabecalho__continer__informacao__apresentacao__icones__img funcional"  src="./Imagens/Tela principal/icone menu.png" alt="Icone menu">
+
+                    </button>
+
+                        <section class="continerMenuHambuguer esconder" id="menuOpcoesDaPagina">
+
+                            <ul class="continerMenuHambuguer__opçoes">
+
+                                <li class="continerMenuHambuguer__opçoes__intens funcional temporario" >
+
+                                    <img class="continerMenuHambuguer__opçoes__intens__img iconeusuario" src="./Imagens/MenuHamburguer/usuario.png" alt="Icone usuario">
+
+                                    <div class="user-info">
+                                        <span id="user-name"></span>
+                                        <!-- <button id="logout-btn">Sair</button> -->
+                                    </div>
+                                    <a class="continerMenuHambuguer__opçoes__intens__texto textoCor2" id="logout-btn" href="#">
+                                        Sair
+                                    </a>
+
+                                </li>
+
+                                <li class="continerMenuHambuguer__opçoes__intens textoCor temporario">
+
+                                    <img class="continerMenuHambuguer__opçoes__intens__img" src="./Imagens/MenuHamburguer/icone ferramenta branco.png" alt="Icone usuario">
+
+                                    <a class="continerMenuHambuguer__opçoes__intens__texto textoCor2"  href="./html/configuracoes.html">
+
+                                        Configurações
+
+                                    </a>
+
+                                </li>
+
+                                <li class="continerMenuHambuguer__opçoes__intens textoCor">
+
+                                    <label class="alternar">
+    
+                                        <input class="alternar-selecao" type="checkbox" id="alternar-cor">
+                                        <div class="alternar-escolha"></div>
+            
+                                    </label>
+
+                                    <a class="continerMenuHambuguer__opçoes__intens__texto textoCor">
+
+                                        Modo claro
+
+                                    </a>
+
+                                </li>
+
+                                <li class="continerMenuHambuguer__opçoes__intens textoCor">
+
+                                    <label class="alternar">
+    
+                                        <input class="alternar-selecao" type="checkbox" id="alternar-cor">
+                                        <div class="alternar-escolha"></div>
+            
+                                    </label>
+
+                                    <a class="continerMenuHambuguer__opçoes__intens__texto">
+
+                                        Modo alto contranste 
+
+                                    </a>
+
+                                </li>
+
+                                <li class="continerMenuHambuguer__opçoes__intens">
+
+                                    <img class="continerMenuHambuguer__opçoes__intens__img" src="./Imagens/MenuHamburguer/icone ajuda.png" alt="Icone usuario">
+
+                                    <a class="continerMenuHambuguer__opçoes__intens__texto">
+
+                                        Ajuda
+
+                                    </a>
+
+                                </li>
+
+                                <li class="continerMenuHambuguer__opçoes__intens">
+
+                                    <img class="continerMenuHambuguer__opçoes__intens__img" src="./Imagens/MenuHamburguer/icone erro.png" alt="Icone usuario">
+
+                                    <a class="continerMenuHambuguer__opçoes__intens__texto">
+
+                                        Relata erro
+
+                                    </a>
+
+                                </li>
+
+                                <li class="continerMenuHambuguer__opçoes__intens">
+
+                                    <img class="continerMenuHambuguer__opçoes__intens__img girar" src="./Imagens/MenuHamburguer/icone seta branca.png" alt="Icone usuario">
+
+                                    <a class="continerMenuHambuguer__opçoes__intens__texto">
+
+                                        Linguagem
+
+                                    </a>
+
+                                </li>
+
+                            </ul>
+                        
+                        </section>
+
+                </div>
+
+            </div>
+
+            <div class="telaPrincipal__cabecalho____paginas">
+
+                <div class="ativoLinhaDecorativa3"></div>
+
+                <nav class="telaPrincipal__cabecalho____paginas__links" id = "paginasLinks">
+
+                    <a class="telaPrincipal__cabecalho____paginas__links__link linkAtivo">
+
+                        Tarefas
+
+                    </a>
+
+                    <a class="telaPrincipal__cabecalho____paginas__links__link">
+
+                        Linha do tempo
+
+                    </a>
+
+                    <a class="telaPrincipal__cabecalho____paginas__links__link">
+
+                        Arquivos
+
+                    </a>
+
+                </nav>
+
+                <div class="telaPrincipal__cabecalho____paginas__continerColegas" id = "ColegasIcones">
+
+                    <img class="telaPrincipal__cabecalho____paginas__continerColegas__img" src="./Imagens/Tela principal/icone pessoas.png" alt="Icone pessoas">
+                
+                    <div class="telaPrincipal__cabecalho____paginas__continerColegas__maisColegas">
+
+                        +20
+
+                    </div>
+                    
+                    <div class="linhaDecorativa"></div>
+
+                    <div class="telaPrincipal__cabecalho____paginas__continerColegas__simbolo">
+
+                        +
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="telaPrincipal__filtro" id = "botoesFiltro">
+
+            <div class="telaPrincipal__filtro__vizualizacoes">
+
+                <button class="telaPrincipal__filtro__vizualizacoes__botao botaoAtivo">
+
+                    <img class="telaPrincipal__filtro__vizualizacoes__botao__img" class="" src="./Imagens/Filtros/Kanban.png" alt="Icone Kanban">
+
+                    Kanban
+
+                </button>
+
+                <button  class="telaPrincipal__filtro__vizualizacoes__botao">
+
+                    <img class="telaPrincipal__filtro__vizualizacoes__botao__img" src="./Imagens/Filtros/Tabela.png" alt="Icone tabela">
+
+                    Tabela
+                    
+                </button>
+
+                <button  class="telaPrincipal__filtro__vizualizacoes__botao">
+
+                    <img class="telaPrincipal__filtro__vizualizacoes__botao__img" src="./Imagens/Filtros/Lista.png" alt="Icone lista">
+
+                    Ver lista
+                    
+                </button>
+
+            </div>
+
+            <div class="telaPrincipal__filtro__filtro">
+
+                <button  class="telaPrincipal__filtro__vizualizacoes__botao">
+
+                    <img class="telaPrincipal__filtro__vizualizacoes__botao__img" src="./Imagens/Filtros/Filtro.png" alt="Icone filtro ">
+
+                    Filtro
+                    
+                </button>
+
+            </div>
+
+        </section>
+
+        <section class ="telaPrincipal__tarefas">
+
+            <section class="telaPrincipal__tarefas__categoria">
+
+                <div class="telaPrincipal__tarefas__categoria__topo" id = "novaTarefaTopo">
+
+                    <div class="telaPrincipal__tarefas__continer__topo">
+                    
+                        <h3 class="telaPrincipal__tarefas__categoria__titulo">
+
+                            🔴 <strong class="telaPrincipal__tarefas__categoria__titulo__texto temporario"> A Fazer </strong>
+
+                        </h3>
+
+                        <img class="telaPrincipal__tarefas__categoria__img" src="./Imagens/Tela principal/icone menu.png" alt="Icone menu">
+
+                    </div>
+
+                    <button id="addTask1" class="telaPrincipal__tarefas__categoria__botaoAdicionar" style="cursor: pointer;">
+
+                        +
+
+                    </button>
+
+                </div>
+                <ul class="telaPrincipal__tarefas__categoria__cards tarefas-to-do"></ul>
+               <!--  <ul class="telaPrincipal__tarefas__categoria__cards">
+
+                    <li class="telaPrincipal__tarefas__categoria__cards__continer">
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__topo">
+
+                            <div class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos">
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoAmarelo">
+
+                                    Dinheiro
+
+                                </p>
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoLaranja">
+
+                                    Economia
+
+                                </p>
+
+                            </div>
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__img" src="./Imagens/Tela principal/Icone menu amarelo.png" alt="Icone menu">
+
+                        </div>
+
+                        <h4 class="telaPrincipal__tarefas__categoria__cards__continer__titulo">
+
+                            Delegar Responsabilidades Financeiras
+
+                        </h4>
+
+                        <p class="telaPrincipal__tarefas__categoria__cards__continer__resumo">
+
+                            Delegue finanças para "representantes" para confudir o governo evitar esta na mira da receita federal 
+
+                        </p>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Gato como representante 
+
+                        </div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Coloca cachorro como CEO
+
+                        </div>
+
+                        <div class="LinhaDecorativa2"></div>
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__AdicionarTarefa temporario">
+
+                            + Adicionar Subtarefa
+
+                        </button>
+
+                        <div class="linhaDecorativa2"></div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__final">
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__final__pessaosImg" src="./Imagens/cards/Mulheres icones.png" alt="Icone pessoas">
+
+                        </div>
+
+                    </li>
+
+                </ul> -->
+
+                <!-- <ul class="telaPrincipal__tarefas__categoria__cards">
+
+                    <li class="telaPrincipal__tarefas__categoria__cards__continer">
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__topo">
+
+                            <div class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos">
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoAmarelo">
+
+                                    Dinheiro
+
+                                </p>
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoLaranja">
+
+                                    Economia
+
+                                </p>
+
+                            </div>
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__img" src="./Imagens/Tela principal/Icone menu amarelo.png" alt="Icone menu">
+
+                        </div>
+
+                        <h4 class="telaPrincipal__tarefas__categoria__cards__continer__titulo">
+
+                            Planejamento Estratégico de Rendimentos
+
+                        </h4>
+
+                        <p class="telaPrincipal__tarefas__categoria__cards__continer__resumo">
+
+                            Delegue finanças para "representantes" para confudir o governo evitar esta na mira da receita federal 
+
+                        </p>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Verificar "salário anual" do gato e do cachorro
+
+                        </div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Converter horas extras em "horas de meditação" 
+
+                        </div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Planejar sua próxima "conferência" na praia
+
+                        </div>
+
+                        <div class="LinhaDecorativa2"></div>
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__AdicionarTarefa temporario">
+
+                            + Adicionar Subtarefa
+
+                        </button>
+
+                        <div class="linhaDecorativa2"></div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__final">
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__final__pessaosImg" src="./Imagens/cards/Homens icones.png" alt="Icone pessoas">
+
+                        </div>
+
+                    </li>
+
+                </ul> -->
+
+                <!-- <ul class="telaPrincipal__tarefas__categoria__cards">
+
+                    <li class="telaPrincipal__tarefas__categoria__cards__continer">
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__topo">
+
+                            <div class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos">
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoAmarelo">
+
+                                    Dinheiro
+
+                                </p>
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoLaranja">
+
+                                    Economia
+
+                                </p>
+
+                            </div>
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__img" src="./Imagens/Tela principal/Icone menu amarelo.png" alt="Icone menu">
+
+                        </div>
+
+                        <h4 class="telaPrincipal__tarefas__categoria__cards__continer__titulo">
+
+                            Registrar empresas em paraísos fiscais
+
+                        </h4>
+
+                        <p class="telaPrincipal__tarefas__categoria__cards__continer__resumo">
+
+                            monta uma empresa fantasma em um paraíso fiscal e a usa para fazer transações com preços falsos para transmitir dinheiro para lá 
+
+                        </p>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Criar a  empresa"CocacolaInfinita"
+
+                        </div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Fazer o L para evitar criticas do governo 
+
+                        </div>
+
+                        <div class="LinhaDecorativa2"></div>
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__AdicionarTarefa temporario">
+
+                            + Adicionar Subtarefa
+
+                        </button>
+
+                        <div class="linhaDecorativa2"></div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__final">
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__final__pessaosImg" src="./Imagens/cards/Mulheres icones.png" alt="Icone pessoas">
+
+                        </div>
+
+                    </li>
+
+                </ul> -->
+
+            </section>
+
+           <section>
+
+            <section class="telaPrincipal__tarefas__categoria">
+
+                <div class="telaPrincipal__tarefas__categoria__topo">
+
+                    <div class="telaPrincipal__tarefas__continer__topo" id = "emProgressoTopo">
+                    
+                        <h3 class="telaPrincipal__tarefas__categoria__titulo">
+
+                            ⚪ <strong class="telaPrincipal__tarefas__categoria__titulo__texto temporario"> Em progresso - 1 </strong>
+
+                        </h3>
+
+                        <img class="telaPrincipal__tarefas__categoria__img" src="./Imagens/Tela principal/icone menu.png" alt="Icone menu">
+
+                    </div>
+
+                    <button id="addTask2" class="telaPrincipal__tarefas__categoria__botaoAdicionar" style="cursor: pointer;">+</button>
+
+                </div>
+
+                <!-- <ul class="telaPrincipal__tarefas__categoria__cards">
+
+                    <li class="telaPrincipal__tarefas__categoria__cards__continer">
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__topo">
+
+                            <div class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos">
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoAzul">
+
+                                    Acordos
+
+                                </p>
+
+                                <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoVerde">
+
+                                    Pessoas
+
+                                </p>
+
+                            </div>
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__img" src="./Imagens/Tela principal/Icone menu amarelo.png" alt="Icone menu">
+
+                        </div>
+
+                        <h4 class="telaPrincipal__tarefas__categoria__cards__continer__titulo">
+
+                            Arrumar Laranjas 
+
+                        </h4>
+
+                        <p class="telaPrincipal__tarefas__categoria__cards__continer__resumo">
+
+                            nomear um "laranja" que atue como proprietário do ativo ou da empresa.
+
+                        </p>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                            <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                            Convencer a Juliana a virar a laranja dando um Bk  
+
+                        </div>
+
+                        <div class="LinhaDecorativa2"></div>
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__AdicionarTarefa temporario">
+
+                            + Adicionar Subtarefa
+
+                        </button>
+
+                        <div class="linhaDecorativa2"></div>
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__final">
+
+                            <img class="telaPrincipal__tarefas__categoria__cards__continer__final__pessaosImg imgDiminuir" src="./Imagens/cards/Icone homem.png" alt="Icone pessoas">
+
+                        </div>
+
+                    </li>
+
+                </ul> -->
+                <ul class="telaPrincipal__tarefas__categoria__cards tarefas-in-progress"></ul>              
+
+           </section>
+
+        </section>
+
+        <section class="telaPrincipal__tarefas__categoria">
+
+            <div class="telaPrincipal__tarefas__categoria__topo">
+
+                <div class="telaPrincipal__tarefas__continer__topo" id = "completoTopo">
+                
+                    <h3 class="telaPrincipal__tarefas__categoria__titulo">
+
+                        🟢 <strong class="telaPrincipal__tarefas__categoria__titulo__texto temporario"> Completo - 2 </strong>
+
+                    </h3>
+
+                    <img class="telaPrincipal__tarefas__categoria__img" src="./Imagens/Tela principal/icone menu.png" alt="Icone menu">
+
+                </div>
+
+                <button id="addTask3" class="telaPrincipal__tarefas__categoria__botaoAdicionar" style="cursor: pointer;">
+
+                    +
+
+                </button>
+
+            </div>
+            <ul class="telaPrincipal__tarefas__categoria__cards tarefas-done"></ul>
+            <!-- <ul class="telaPrincipal__tarefas__categoria__cards">
+
+                <li class="telaPrincipal__tarefas__categoria__cards__continer">
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__topo">
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos">
+
+                            <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoRoxo">
+
+                                Moradia
+
+                            </p>
+
+                            <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoMarrom">
+
+                                Leis
+
+                            </p>
+
+                        </div>
+
+                        <img class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__img" src="./Imagens/Tela principal/Icone menu amarelo.png" alt="Icone menu">
+
+                    </div>
+
+                    <h4 class="telaPrincipal__tarefas__categoria__cards__continer__titulo">
+
+                        Estabelecer residência em outro país
+
+                    </h4>
+
+                    <p class="telaPrincipal__tarefas__categoria__cards__continer__resumo">
+
+                        Se mudou para a França e depois para os Estados Unidos para fugir dos impostos do país natal.
+
+                    </p>
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                        Se mudar do Pais  
+
+                    </div>
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                        Compra uma casa
+
+                    </div>
+
+                    <div class="LinhaDecorativa2"></div>
+
+                    <button class="telaPrincipal__tarefas__categoria__cards__continer__AdicionarTarefa temporario">
+
+                        + Adicionar Subtarefa
+
+                    </button>
+
+                    <div class="linhaDecorativa2"></div>
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__final">
+
+                        <img class="telaPrincipal__tarefas__categoria__cards__continer__final__pessaosImg" src="./Imagens/cards/Homens icones.png" alt="Icone pessoas">
+
+                    </div>
+
+                </li>
+
+            </ul>
+
+            <ul class="telaPrincipal__tarefas__categoria__cards">
+
+                <li class="telaPrincipal__tarefas__categoria__cards__continer">
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__topo">
+
+                        <div class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos">
+
+                            <p class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__topic topicoMarrom">
+
+                                Leis
+
+                            </p>
+
+                        </div>
+
+                        <img class="telaPrincipal__tarefas__categoria__cards__continer__topo__topicos__img" src="./Imagens/Tela principal/Icone menu amarelo.png" alt="Icone menu">
+
+                    </div>
+
+                    <h4 class="telaPrincipal__tarefas__categoria__cards__continer__titulo">
+
+                        Aproveitar brechas legais
+
+                    </h4>
+
+                    <p class="telaPrincipal__tarefas__categoria__cards__continer__resumo">
+
+                        não apenas trata de evasão fiscal, mas achar supressão fiscal
+
+                    </p>
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                        Criar Organizações de caridade
+
+                    </div>
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__checkin">
+
+                        <button class="telaPrincipal__tarefas__categoria__cards__continer__checkin__botao"></button>
+
+                        Fazer um monte filho para coloca no imposto de renda 
+
+                    </div>
+
+                    <div class="LinhaDecorativa2"></div>
+
+                    <button class="telaPrincipal__tarefas__categoria__cards__continer__AdicionarTarefa temporario">
+
+                        + Adicionar Subtarefa
+
+                    </button>
+
+                    <div class="linhaDecorativa2"></div>
+
+                    <div class="telaPrincipal__tarefas__categoria__cards__continer__final">
+
+                        <img class="telaPrincipal__tarefas__categoria__cards__continer__final__pessaosImg" src="./Imagens/cards/Homens icones.png" alt="Icone pessoas">
+
+                    </div>
+
+                </li>
+
+            </ul> -->
+        
+    </section>
+<!-- ----------------------------------------------SCRIPTS------------------------------------------------------------------- -->
+
+<script src="./JavaScript/configuracoes.js"></script>
+<script src="./JavaScript/menuProcurar.js"></script>
+<script src="./JavaScript/cabecalho.js"></script>
+<script src="./JavaScript/filtro..js"></script>
+<script src="./JavaScript/tarefas.js"></script>
+<script src="./JavaScript/menuHambuguer.js"></script>
+
+
+</body>
+<!-- Modal criar projeto -->
+<div id="modalCriarProjeto" class="modal" style="display: none;" title="Criar Novo Projeto">
+    <div class="modal-conteudo">
+        <span class="fechar" id="fecharModal">&times;</span>
+        <h2>Criar Novo Projeto</h2>
+        <form id="formCriarProjeto">
+            <label for="nomeProjeto">Nome do Projeto</label>
+            <input type="text" id="nomeProjeto" name="name" required>
+
+            <label for="descricaoProjeto">Descrição</label>
+            <textarea id="descricaoProjeto" name="description" required></textarea>
+
+            <button type="submit">Criar Projeto</button>
+        </form>
+    </div>
+</div>
+<!-- Modal criar tarefa -->
+<div id="modalCriarTarefa" class="modal" style="display: none;">
+    <div class="modal-conteudo">
+        <span class="fechar" id="fecharModalTask">&times;</span>
+        <h2>Criar Nova Tarefa</h2>
+        <form id="formCriarTarefa">
+            <label for="titulo">Título:</label>
+            <input type="text" id="titulo" name="titulo" required>
+
+            <label for="descricao">Descrição:</label>
+            <textarea id="descricao" name="descricao"></textarea>
+
+            <label for="projetoId">Projeto:</label>
+            <select id="projetoId" name="projetoId" required>
+                <option value="">-- Selecione um Projeto --</option>
+            </select>
+            
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="to-do">To Do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+            <!-- <label for="responsavelId">Responsável:</label>
+            <select id="responsavelId" name="responsavelId" required>
+            </select> -->
+
+            <label for="dataVencimento">Data de Vencimento:</label>
+            <input type="date" id="dataVencimento" name="dataVencimento">
+
+            <button type="submit">Criar Tarefa</button>
+        </form>
+    </div>
+</div>
+
+<div id="modalEditarTarefa" class="modal" style="display: none;">
+    <div class="modal-conteudo">
+        <span id="fecharTaskEdit" class="fechar">&times;</span>
+        <h2>Editar Tarefa</h2>
+        <form id="formEditarTarefa">
+            <input type="hidden" id="editarTarefaId" />
+
+            <label for="tituloEditar">Título:</label>
+            <input type="text" id="tituloEditar" name="tituloEditar" required>
+
+            <label for="descricaoEditar">Descrição:</label>
+            <textarea id="descricaoEditar" name="descricaoEditar"></textarea>
+            
+            <label for="statusEditar">Status:</label>
+            <select id="statusEditar" name="statusEditar" required>
+                <option value="to-do">To Do</option>
+                <option value="in-progress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+
+            <label for="dataVencimentoEditar">Data de Vencimento:</label>
+            <input type="date" id="dataVencimentoEditar" name="dataVencimentoEditar">
+
+            <button type="submit">Salvar Alterações</button>
+        </form>
+    </div>
+</div>

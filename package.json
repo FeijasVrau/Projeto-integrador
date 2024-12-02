@@ -1,0 +1,23 @@
+{
+  "name": "planejafacil",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "**Planeja Fácil** é uma solução simples e eficiente para gerenciar projetos, tarefas e equipes. Ideal para qualquer mercado que precise de uma gestão de projetos simplificada, permitindo acompanhar o progresso de tarefas e prazos em tempo real, facilitando a colaboração entre membros fixos e temporários da equipe.",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.7.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  }
+}
